@@ -22,7 +22,7 @@ if (fetchError) {
     return;
 }
 
-const { value: data, isError } = response.json.try();
+const { value: data, isError } = await response.json.try();
 if (parseResult.isError) {
     console.log('Failed to parse JSON');
     return;
